@@ -1,19 +1,28 @@
 package modele;
 
-abstract class Joueur {
+public abstract class Joueur {
+
     private String nom;
-    private String score;
+    private int score;
+
     public Joueur(String nom) {
         this.nom = nom;
-        this.score = "0";
+        this.score = 0;
     }
+
     public String getNom() {
         return nom;
     }
-    public String getScore() {
+
+    public int getScore() {
         return score;
     }
-    public abstract Coup choisirCoup(Partie partie);
 
+    public void ajouterScore(int points) {
+        this.score += points; 
+    }
+
+   
+    public abstract Coup choisirCoup(AlignmentCases alignement);
 
 }

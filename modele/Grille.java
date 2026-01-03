@@ -5,7 +5,7 @@ public class Grille {
     private int[][] cases;
 
     public Grille(Object tailleGrille) {
-        this.taille = (int) tailleGrille; // taille définie par l'utilisateur
+        this.taille = (int) tailleGrille; 
         this.cases = new int[taille][taille];
     }
     public int[][] getCases(){
